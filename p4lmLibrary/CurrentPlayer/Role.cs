@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Security;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace p4lmLibrary.Levels
+namespace p4lmLibrary.CurrentPlayer
 {
     /// <summary>
-    /// intro to the experience
+    /// enumeration for player (normal player or admin)
     /// </summary>
-    public class Intro : Level
+    public enum Role
     {
-        
+        Player,
+        Admin
     }
 }

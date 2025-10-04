@@ -49,8 +49,9 @@ namespace p4lmLibrary.Hub
                         Console.ReadKey();
                         Console.Clear();
 
-                        player.CurrentLevel = new Intro();
                         player.Auth = true;
+                        player.Role = Role.Player;
+                        player.CurrentLevel = new Intro();
 
                         break;
 
@@ -59,7 +60,20 @@ namespace p4lmLibrary.Hub
                         Console.WriteLine($"i am immensely disappointed in you {player.Name}... please rethink your choices");
                         Console.ReadKey();
                         Console.Clear();
+
                         Environment.Exit(0);
+
+                        break;
+
+                    case "admin":
+                        Console.Clear();
+                        Console.WriteLine($"ahhh, i see {player.Name}... welcome to euphoria...");
+                        Console.ReadKey();
+                        Console.Clear();
+
+                        player.Auth = true;
+                        player.Role = Role.Admin;
+                        player.CurrentLevel = new AdminLounge();
 
                         break;
 

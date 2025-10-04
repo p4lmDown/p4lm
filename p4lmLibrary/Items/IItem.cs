@@ -4,15 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace p4lmLibrary.Entities
+namespace p4lmLibrary.Items
 {
     /// <summary>
-    /// entity interface
+    /// item interface
     /// </summary>
-    public interface IEntity
+    public interface IItem
     {
         string Name { get; set; }
-        int CurrentHealth { get; set; }
-        int MaxHealth { get; set; }
     }
 }

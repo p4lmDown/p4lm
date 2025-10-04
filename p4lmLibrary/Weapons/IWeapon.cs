@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Security;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace p4lmLibrary.Levels
+namespace p4lmLibrary.Weapons
 {
     /// <summary>
-    /// intro to the experience
+    /// weapon interface
     /// </summary>
-    public class Intro : Level
+    public interface IWeapon
     {
-        
+        int Damage { get; set; }
     }
 }

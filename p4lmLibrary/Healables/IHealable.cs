@@ -4,15 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace p4lmLibrary.Entities
+namespace p4lmLibrary.Healables
 {
     /// <summary>
-    /// entity interface
+    /// healable interface
     /// </summary>
-    public interface IEntity
+    public interface IHealable
     {
         string Name { get; set; }
-        int CurrentHealth { get; set; }
-        int MaxHealth { get; set; }
+        int Effectiveness { get; set; }
     }
 }
