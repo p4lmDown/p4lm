@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace p4lmLibrary.Entities
 {
+    /// <summary>
+    /// entity interface
+    /// </summary>
     public interface IEntity
     {
-
+        string Name { get; set; }
+        int CurrentHealth { get; set; }
+        int MaxHealth { get; set; }
     }
 }

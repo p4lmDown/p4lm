@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace p4lmLibrary.Levels
 {
+    /// <summary>
+    /// level interface
+    /// </summary>
     public interface ILevel
     {
-
+        
     }
 }

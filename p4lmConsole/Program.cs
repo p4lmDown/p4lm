@@ -9,7 +9,10 @@ namespace p4lmConsole
 {
     internal class Program
     {
-        // Main program
+        /// <summary>
+        /// main program, where it all starts
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             Hub hub = new Hub();
