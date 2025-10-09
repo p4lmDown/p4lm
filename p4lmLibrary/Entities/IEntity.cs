@@ -14,5 +14,7 @@ namespace p4lmLibrary.Entities
         string Name { get; set; }
         int CurrentHealth { get; set; }
         int MaxHealth { get; set; }
+        int Damage { get; set; }
+        void Attack(Entity entity);
     }
 }

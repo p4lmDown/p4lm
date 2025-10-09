@@ -17,6 +17,8 @@ namespace p4lmLibrary.Entities
 
         private int _maxHealth;
 
+        private int _damage;
+
         /// <summary>
         /// gets and sets the name of the entity
         /// </summary>
@@ -60,6 +62,43 @@ namespace p4lmLibrary.Entities
             {
                 _maxHealth = value;
             }
+        }
+
+        /// <summary>
+        /// gets and sets the damage of the entity
+        /// </summary>
+        public int Damage
+        {
+            get
+            {
+                return _damage;
+            }
+            set
+            {
+                _damage = value;
+            }
+        }
+
+        /// <summary>
+        /// entity attacks entity
+        /// </summary>
+        public void Attack(Entity entity)
+        {
+            int prevHealth = entity.CurrentHealth;
+            entity.CurrentHealth = entity.CurrentHealth - this.Damage;
+
+            if (entity.CurrentHealth <= 0)
+            {
+                Console.WriteLine($"{this.Name} delivered the final blow clocking in at {this.Damage} damage");
+                return;
+            }
+            else
+            {
+                Console.WriteLine($"{this.Name} did {this.Damage} to {entity.Name}, bringing their health from {prevHealth} to {entity.CurrentHealth}");
+            }
+
+            Console.ReadKey();
+            Console.Clear();
         }
     }
 }

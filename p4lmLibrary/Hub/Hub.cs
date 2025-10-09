@@ -19,13 +19,15 @@ namespace p4lmLibrary.Hub
         /// </summary>
         public void Engage()
         {
-            InfoGather();
+            Player player = InfoGather();
+
+            player.CurrentLevel.Start(player);
         }
 
         /// <summary>
         /// Gathers information about the player
         /// </summary>
-        public void InfoGather()
+        public Player InfoGather()
         {
             Player player = new Player();
 
@@ -67,7 +69,7 @@ namespace p4lmLibrary.Hub
 
                     case "admin":
                         Console.Clear();
-                        Console.WriteLine($"ahhh, i see {player.Name}... welcome to euphoria...");
+                        Console.WriteLine($"ahhh, i see {player.Name}...");
                         Console.ReadKey();
                         Console.Clear();
 
@@ -83,6 +85,8 @@ namespace p4lmLibrary.Hub
                         break;
                 }
             }
+
+            return player;
         }
     }
 }

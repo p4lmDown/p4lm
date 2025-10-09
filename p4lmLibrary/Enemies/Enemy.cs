@@ -1,15 +1,16 @@
-﻿using System;
+﻿using p4lmLibrary.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace p4lmLibrary.CurrentPlayer.PlayerInventory
+namespace p4lmLibrary.Enemies
 {
     /// <summary>
-    /// inventory slot class
+    /// enemy class
     /// </summary>
-    public class Slot
+    public class Enemy : Entity, IEnemy
     {
 
     }

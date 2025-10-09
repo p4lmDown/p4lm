@@ -10,26 +10,9 @@ namespace p4lmLibrary.Healables
     /// <summary>
     /// healable class
     /// </summary>
-    public class Healable : IHealable
+    public class Healable : Item, IHealable
     {
-        private string _name;
-
         private int _effectiveness;
-
-        /// <summary>
-        /// gets and sets the name of the healable
-        /// </summary>
-        public string Name
-        {
-            get
-            {
-                return _name;
-            }
-            set
-            {
-                _name = value;
-            }
-        }
 
         /// <summary>
         /// gets and sets the effectiveness of the healable

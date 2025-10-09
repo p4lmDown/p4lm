@@ -1,4 +1,5 @@
-﻿using p4lmLibrary.Entities;
+﻿using p4lmLibrary.Enemies;
+using p4lmLibrary.Entities;
 using p4lmLibrary.Healables;
 using p4lmLibrary.Items;
 using p4lmLibrary.Levels;
@@ -24,13 +25,15 @@ namespace p4lmLibrary.CurrentPlayer
 
         private string _decision;
 
+        private string _result;
+
         private Level _currentLevel;
 
         private Weapon _currentWeapon;
 
         private List<Healable> _healables;
 
-        private _Inventory _inventory;
+        private Inventory _inventory;
 
         /// <summary>
         /// gets and sets the authorization to continue within inquiries
@@ -74,6 +77,21 @@ namespace p4lmLibrary.CurrentPlayer
             set
             {
                 _decision = value;
+            }
+        }
+
+        /// <summary>
+        /// gets and sets the result of the decision
+        /// </summary>
+        public string Result
+        {
+            get
+            {
+                return _result;
+            }
+            set
+            {
+                _result = value;
             }
         }
 
@@ -123,9 +141,9 @@ namespace p4lmLibrary.CurrentPlayer
         }
 
         /// <summary>
-        /// gets and sets the players inventory
+        /// gets and sets the inventory of the player
         /// </summary>
-        public _Inventory Inventory
+        public Inventory Inventory
         {
             get
             {
@@ -147,7 +165,72 @@ namespace p4lmLibrary.CurrentPlayer
             CurrentWeapon = new Fists();
             Healables = new List<Healable>();
             Healables.Add(new Bandaid());
-            Inventory = new _Inventory(this);
+            Inventory = new Inventory(this);
+            Damage = CurrentWeapon.Damage;
+        }
+
+        /// <summary>
+        /// player attacks enemy
+        /// </summary>
+        /// <param name="player"></param>
+        /// <param name="enemy"></param>
+        public void InitiateFight(Enemy enemy)
+        {
+            this.Auth = false;
+
+            while (!this.Auth)
+            {
+                if (enemy.CurrentHealth <= 0)
+                {
+                    Console.WriteLine($"{enemy.Name} has died");
+                    Console.ReadKey();
+                    Console.Clear();
+
+                    this.Auth = true;
+                    return;
+                }
+                else if (this.CurrentHealth <= 0)
+                {
+                    Console.WriteLine($"you have died {this.Name}");
+                    Console.ReadKey();
+                    Console.Clear();
+
+                    Environment.Exit(0);
+                }
+
+                this.Result = String.Empty;
+
+                Console.WriteLine("do you want to attack, heal, or look at your inventory");
+                this.Decision = Console.ReadLine();
+                Console.Clear();
+
+                while (this.Result == String.Empty)
+                {
+                    switch (this.Decision)
+                    {
+                        case "attack":
+                            this.Attack(enemy);
+                            enemy.Attack(this);
+
+                            break;
+
+                        case "heal":
+
+
+                            break;
+
+                        case "inventory":
+
+
+                            break;
+
+                        default:
+
+
+                            break;
+                    }
+                }
+            }
         }
     }
 }

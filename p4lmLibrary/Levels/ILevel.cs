@@ -11,6 +11,10 @@ namespace p4lmLibrary.Levels
     /// </summary>
     public interface ILevel
     {
-        
+        int TotalEnemies { get; set; }
+        int TotalSecrets { get; set; }
+        bool I { get; set; }
+        bool II { get; set; }
+        bool III {  get; set; }
     }
 }

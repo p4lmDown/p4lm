@@ -42,8 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CurrentPlayer\Player.cs" />
-    <Compile Include="CurrentPlayer\PlayerInventory\Slot.cs" />
     <Compile Include="CurrentPlayer\Role.cs" />
+    <Compile Include="Enemies\Basic.cs" />
+    <Compile Include="Enemies\Enemy.cs" />
+    <Compile Include="Enemies\IEnemy.cs" />
+    <Compile Include="Enemies\RichTechGuy.cs" />
     <Compile Include="Entities\Entity.cs" />
     <Compile Include="Entities\IEntity.cs" />
     <Compile Include="Healables\Bandaid.cs" />
@@ -59,10 +62,11 @@
     <Compile Include="Levels\ILevel.cs" />
     <Compile Include="Levels\Intro.cs" />
     <Compile Include="Levels\Level.cs" />
-    <Compile Include="CurrentPlayer\PlayerInventory\_Inventory.cs" />
+    <Compile Include="PlayerInventory\Inventory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Weapons\Fists.cs" />
     <Compile Include="Weapons\IWeapon.cs" />
+    <Compile Include="Weapons\Nothing.cs" />
     <Compile Include="Weapons\Weapon.cs" />
   </ItemGroup>
   <ItemGroup />
