@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p4lmConsole", "p4lmConsole\p4lmConsole.csproj", "{142768BD-88CF-4389-9455-21DDB617E224}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p4lmLibrary", "p4lmLibrary\p4lmLibrary.csproj", "{CA9AED6B-2A84-43B2-B81F-0AAB314B5C8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{142768BD-88CF-4389-9455-21DDB617E224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{142768BD-88CF-4389-9455-21DDB617E224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{142768BD-88CF-4389-9455-21DDB617E224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{142768BD-88CF-4389-9455-21DDB617E224}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA9AED6B-2A84-43B2-B81F-0AAB314B5C8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA9AED6B-2A84-43B2-B81F-0AAB314B5C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA9AED6B-2A84-43B2-B81F-0AAB314B5C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA9AED6B-2A84-43B2-B81F-0AAB314B5C8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4085FB08-E88B-4973-B53A-18B29C5D1E5B}
+	EndGlobalSection
+EndGlobal
